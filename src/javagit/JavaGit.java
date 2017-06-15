@@ -16,6 +16,10 @@ public class JavaGit {
      */
     public static void main(String[] args) {
        System.out.print("Master of GIthub");
+       
+       for(int i=0;i<10;i++){
+           System.out.println(i);
+       }
     }
     
 }
