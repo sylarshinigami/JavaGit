@@ -14,8 +14,12 @@ public class Calculadora extends javax.swing.JFrame {
     /**
      * Creates new form Calculadora
      */
+    
+    double res=0;
+    
     public Calculadora() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -57,6 +61,11 @@ public class Calculadora extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Suma.setText("+");
+        Suma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SumaMouseClicked(evt);
+            }
+        });
         Suma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SumaActionPerformed(evt);
@@ -346,6 +355,12 @@ agregar(Numero0.getText());        // TODO add your handling code here:
     private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
        System.out.println(evt.getKeyChar());
     }//GEN-LAST:event_formKeyTyped
+
+    private void SumaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SumaMouseClicked
+        // TODO add your handling code here:
+        res = res + Double.parseDouble(Resultado.getText().trim());
+        Resultado.setText(""+res);
+    }//GEN-LAST:event_SumaMouseClicked
 
     private void agregar(String text){
         if("0".equals(Resultado.getText()))
