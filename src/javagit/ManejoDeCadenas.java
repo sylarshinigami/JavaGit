@@ -47,31 +47,29 @@ public class ManejoDeCadenas {
         System.out.println(s1.lastIndexOf("a")); //Da 15 
 
 //endsWith Devuelve true si la cadena termina con un determinado texto. Ejemplo: 
-        System.out.println(s1.endsWith("anillo")); 
+        System.out.println(s1.endsWith("anillo"));
 
 //startsWith Devuelve true si la cadena empieza con un determinado texto.  
-        System.out.println(s1.startsWith("Que")); 
+        System.out.println(s1.startsWith("Que"));
 
         //replace Cambia todas las apariciones de  un carácter por otro en el texto que se indique y lo almacena como resultado. 
         s1 = "Mariposa";
         System.out.println(s1.replace('a', 'e'));//Da Meripose 
         System.out.println(s1);//Sigue valiendo Mariposa 
-        
+
         //replaceAll Modifica en un texto cada entrada de una cadena por otra y devuelve el resultado.
-    s1="Cazar armadillos"; 
-    System.out.println(s1.replace("ar","er"));//Da Cazer ermedillos 
-    System.out.println(s1);//Sigue valiendo Cazar armadilos 
-    
-    
-    System.out.println(s1.toLowerCase());    
-    System.out.println(s1.toUpperCase());
-    
-    char palabra[]=s1.toCharArray();
-    System.out.println(palabra[2]);
-    
-    
-    
+        s1 = "Cazar armadillos";
+        System.out.println(s1.replace("ar", "er"));//Da Cazer ermedillos 
+        System.out.println(s1);//Sigue valiendo Cazar armadilos 
+
+        System.out.println(s1.toLowerCase());
+        System.out.println(s1.toUpperCase());
+        char palabra[] = s1.toCharArray();
+        System.out.println(palabra[2]);
+
+        //trim elimina los espacios en blanco por delante y por detràs
+        s1 = "   Educacion para la vida     ";
+        System.out.println(s1.trim());
     }//FIN DEL MÈTODO MAIN
 
-    
 }//FIN DE LA CLASE
