@@ -11,15 +11,19 @@ package javagit;
  */
 public class JavaGit {
 
+    public JavaGit() {
+    }
+
     /**
      * @param args the command line arguments
      */
+   
     public static void main(String[] args) {
-       System.out.print("Master of GIthub");
-       
-       for(int i=0;i<10;i++){
-           System.out.println(i);
-       }
+
+        Educacion edu = new Educacion();
+        edu.rellenarArreglo();
+        edu.imprimirArreglo();
+        
     }
     
 }
